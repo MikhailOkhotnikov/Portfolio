@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/*header {*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    top: 0;*/
+/*    position: absolute;*/
+/*    padding-left: 10px;*/
+/*    padding-right: 10px;*/
+/*    height: 8vh;*/
+/*    background-image: url('img/bg.jpg');*/
+/*}*/
+
+body {
+    background-color: #e5e5e5;
+}
+
+/*h1, #menu a {*/
+/*    font-family: 'Dancing Script', cursive;*/
+/*    color: white;*/
+/*}*/
+
+/*#menu {*/
+/*    width: 390px;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*}*/
+
+/*#menu a {*/
+/*    font-size: 30px;*/
+/*}*/
+
+/*#menu a:hover, header h1:hover {*/
+/*    color: grey;*/
+/*}*/
+
+nav {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-image: url('img/bg.jpg');
+    font-family: 'Dancing Script', cursive;
+}
+
+.logo {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.hamburger {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.hamburger li {
+    list-style: none;
+}
+
+.hamburger a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color: black;
+    font-size: 2em;
+}
+
+main {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 90vw;
+    background-color: white;
+    margin: 8px;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    height: 32em;
+}
+
+#about img[src="img/image.jpg"] {
+    height: 25em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+#about img[src="img/person.PNG"] {
+    position: relative;
+    height: 25em;
+    right: 20em;
+    top: 5em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+#about h2 {
+    position: relative;
+    left: -8em;
+    top: 3em;
+}
+
+#about p {
+    position: relative;
+    left: 55em;
+    top: -15em;
+    font-family: 'Dancing Script', cursive;
+}
+
+#portfolio {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+#portfolio img {
+    width: 400px;
+    height: 220px;
+}
+
+.window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+}
+
+.window.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.window-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.window-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.window-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.window-body {
+    padding: 10px 15px;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+footer {
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    left: 0;
+    right: 0;
+    height: 5vh;
+    background-color: black;
+    color: gray;
+}
+
+@media screen and (max-width: 1024px){
+    .hamburger {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    header{
+        overflow-x: hidden;
+    }
+    .hamburger {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .hamburger li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Портфолио</title>
+</head>
+<body>
+    <header>
+<!--        <h1>Иван Иваныч,<br>-->
+<!--            Front-end developer-->
+<!--        </h1>-->
+<!--        <nav id="menu">-->
+<!--            <a href="#about">About me</a>-->
+<!--            <a href="#portfolio">Portfolio</a>-->
+<!--            <a href="#contacts">Contacts</a>-->
+<!--        </nav>-->
+        <nav>
+            <div class="logo">
+                <h1>Иван Иваныч,<br>
+                    Front-end developer</h1>
+            </div>
+            <ul class="hamburger">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About me</a>
+                </li>
+                <li>
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#contacts">Contacts</a>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+    <section id="about">
+        <img src="img/image.jpg" alt="keyboard">
+        <img src="img/person.PNG" alt="Обо мне">
+        <h2>About me</h2>
+        <p>
+            - Связал данные мобильного приложения с данными сайта.<br>
+            - Написал код PHP с функционалом чтения, записи и загрузки данных с мобильного и веб приложения в базу.<br>
+            - Создал 2 графика для анализа данных с фильтрами по датам (ежедневно, еженедельно, ежемесячно и ежегодно).<br>
+            Графики включали в себя общие данные о записях пользователя, воспроизведенные с помощью line chart, bar chart & pie chart.<br>
+            Каждая точка на графике может быть детально изучена.<br>
+            - Оптимизировал более 20000 строк кода: PHP - 7500, Java for Android - 13000<br>
+            - Работал над безопасностью данных пользователя: шифрование (хэширование) паролей с использованием функции base64_encode.<br>
+        </p>
+    </section>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+
+            <button data-window-target="#window" class="open-window" type="submit">More details</button>
+            <img src="img/project1.png" alt="Flashcards">
+            <p>Flashcards</p>
+
+            <button data-window-target="#window" class="open-window" type="submit">More details</button>
+            <img src="img/project2.png" alt="Virtual Piano">
+            <p>Virtual Piano</p>
+
+    </section>
+
+    <div class="window" id="window">
+        <div class="window-header">
+            <div class="title">Project</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="window-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At eos inventore, itaque molestiae mollitia nostrum optio perferendis perspiciatis qui voluptas!
+            Accusantium asperiores at, atque corporis delectus dolorum, eaque ipsa ipsam molestiae molestias nobis odit quidem sed totam vel!
+            Dolor doloribus fugiat maxime saepe soluta temporibus unde vitae! Beatae delectus et laboriosam nihil nostrum porro quae quidem rerum.
+            Architecto asperiores deserunt dicta ducimus est illo impedit incidunt inventore, iusto laudantium minus molestias necessitatibus quae quis ratione sit sunt ut veniam voluptates.
+        </div>
+    </div>
+    <div id="overlay"></div>
+
+    <section id="contacts">
+        <h2>Contacts</h2>
+        <a href="tel:+1234567890"> +1234567890 </a><br>
+        <a href="mailto:example@mail.com"> example@mail.com </a>
+    </section>
+    </main>
+    <footer>
+        <p>(c)Copyright</p>
+    </footer>
+</body>
+</html>
